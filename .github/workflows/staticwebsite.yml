@@ -2,7 +2,7 @@ name: Build and Deploy Static Website
 
 on:
   push:
-    branches: [main]
+    branches: ["master"]
 
 
 jobs:
@@ -22,12 +22,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
         
-    # - name: Configure AWS credential
-    #   uses: aws-actions/configure-aws-credentials@v1
-    #   with:
-    #     aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-    #     aws-secret-access-key: ${{ secrets.SECRET_KEY }}
-    #     aws-region: ${{ env.REGION }}
+    - name: Configure AWS credential
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.SECRET_KEY }}
+        aws-region: ${{ env.REGION }}
 
     # - name: Copy files to S3
     #   run: |

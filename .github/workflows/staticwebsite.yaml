@@ -3,40 +3,24 @@ name: Build and Deploy Static Website
 on:
   push:
     branches: [main]
-    paths: 
-      - 'Static_Website/**'
+
 
 jobs:
   build-linux:
+    name: Build linux
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
+    env:
+    # bucket name, region, cloudfront distribution id
+      BUCKET: oluwaseunadeyo.com.ng
+      DIST: build
+      REGION: eu-west-1
+      DIST_ID: EWF2XRZWNJ64E
 
     steps:
-    - uses: actions/checkout@v2
-    # unshallow git clone
-    - run: |
-        git fetch --prune --unshallow
-        
-# 
-
-
-# jobs:
-#   build-linux:
-#     name: Build linux
-#     runs-on: ubuntu-latest
-#     strategy:
-#       max-parallel: 5
-#     env:
-#     # bucket name, region, cloudfront distribution id
-#       BUCKET: oluwaseunadeyo.com.ng
-#       DIST: build
-#       REGION: eu-west-1
-#       DIST_ID: EWF2XRZWNJ64E
-
-#     steps:
-#     - name: Checkout
-#       uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
         
     # - name: Configure AWS credential
     #   uses: aws-actions/configure-aws-credentials@v1

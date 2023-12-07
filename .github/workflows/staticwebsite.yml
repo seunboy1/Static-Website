@@ -29,9 +29,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.SECRET_KEY }}
         aws-region: ${{ env.REGION }}
 
-    # - name: Copy files to S3
-    #   run: |
-    #     aws s3 sync --delete ${{ env.DIST }} ${{ env.BUCKET }}
+    - name: Copy files to S3
+      run: |
+        aws s3 sync --delete ${{ env.DIST }} ${{ env.BUCKET }}
    
     # - name: Invalidate cloudfront cache
     #   run: |

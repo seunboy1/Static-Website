@@ -13,7 +13,7 @@ jobs:
       max-parallel: 5
     env:
     # bucket name, region, cloudfront distribution id
-      BUCKET: oluwaseunadeyo.com.ng
+      BUCKET: s3://oluwaseunadeyo.com.ng/
       DIST: build
       REGION: eu-west-1
       DIST_ID: EWF2XRZWNJ64E
@@ -31,7 +31,8 @@ jobs:
 
     - name: Copy files to S3
       run: |
-        aws s3 sync --delete ${{ env.DIST }} ${{ env.BUCKET }}
+
+        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
    
     # - name: Invalidate cloudfront cache
     #   run: |

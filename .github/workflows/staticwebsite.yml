@@ -31,8 +31,8 @@ jobs:
 
     - name: Copy files to S3
       run: |
-      
-        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
+        pwd
+        # aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
    
     # - name: Invalidate cloudfront cache
     #   run: |

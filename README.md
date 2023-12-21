@@ -12,8 +12,8 @@ This project demonstrate how to deploy a static website to AWS using AWS S3, Clo
 ### By the end of this post you will be able to: 
 * **Create an S3 bucket and Configure it for static website hosting.**
 * **Create a record in Route 53.**
-* * **Create ssl certificates.**
-* * **Create a cloudfront distribution.**
+* **Create ssl certificates.**
+* **Create a cloudfront distribution.**
 * **Then Finally Link the S3, Custom Domain via Route 53 and cloudfront To access your website.**
 ### Here is a sample of how it should look like.
 ![website](assets/img/website.png)

@@ -2,7 +2,7 @@
 This project demonstrate how to deploy a static website to AWS using AWS S3, Cloudfront, Route53 and Github actions for the CI/CD.
 
 
-![static website](assets/img/staticwebsite.png)
+![static website](assets/img/staticwebsite.gif)
 <!-- ![static website](assets/architecture.png) -->
 ### Prerequisites.
 * **You should have a domain name already purchased to link with your Static Website. You can use whogohost.com**

@@ -258,44 +258,60 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="DVC & Model Versioning"><i class="bx bx-plus"></i></a>
-                <a href="dvc.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/staticwebsite.gif" class="card-img-top" alt="How to Deploy Static‑Website">
+              <div class="card-body">
+                <span class="badge bg-secondary mb-2">Cloud DevOps Engineering</span>
+                <h5 class="card-title">How to Deploy Static‑Website on AWS</h5>
+                <p class="card-text">
+                  Learn how to deploy a static website on AWS using S3 for storage, CloudFront for global content delivery, and Route 53 for DNS management. This project demonstrates best practices for hosting, securing, and distributing static content in the cloud.
+                </p>
+                <p class="small text-muted">
+                  <strong>Tech:</strong> HTML, CSS, JavaScript
+                </p>
+                <a href="https://github.com/seunboy1/Static-Website" class="btn btn-sm btn-outline-dark" target="_blank">GitHub Repo</a>
+                <a href="https://medium.com/arbitrary-link" class="btn btn-sm btn-outline-primary" target="_blank">Medium Article</a>
               </div>
             </div>
           </div>
 
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/dvc.png" class="card-img-top" alt="How to Ensure Reproducibility Easily in Data Science Through Version Control">
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Data Science</span>
+                <h5 class="card-title">How to Ensure Reproducibility Easily in Data Science Through Version Control</h5>
+                <p class="card-text">
+                  A guide on achieving reproducibility in data science workflows by integrating data and model versioning, specifically using DVC (Data Version Control) and Git to track and manage datasets and experiments.
+                </p>
+                <p class="small text-muted">
+                  <strong>Tech:</strong> DVC, Git/GitHub, Docker, Jupyter Notebooks, Containerization
+                </p>
+                <a href="https://gist.github.com/seunboy1/f70d5df891aca0409d583b14f499443b" class="btn btn-sm btn-outline-dark" target="_blank">GitHub Repo</a>
+                <a href="https://medium.com/geekculture/how-to-ensure-reproducibility-easily-in-data-science-through-version-control-1777ae3b15a" class="btn btn-sm btn-outline-success" target="_blank">Medium Article</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/cloudfront.png" class="card-img-top" alt="Automated Cloud Deployment Pipeline">
+              <div class="card-body">
+                <span class="badge bg-info mb-2">Cloud DevOps Engineering</span>
+                <h5 class="card-title">Automated Cloud Deployment Pipeline</h5>
+                <p class="card-text">
+                  A CI/CD pipeline that automates the deployment of web applications to AWS using services like CodePipeline, CodeBuild, and Elastic Beanstalk. Ensures zero-downtime deployments, automated testing, and rollback capabilities.
+                </p>
+                <p class="small text-muted">
+                  <strong>Tech:</strong> AWS CodePipeline, CodeBuild, Elastic Beanstalk, GitHub Actions, Docker
+                </p>
+                <a href="https://github.com/your-repo-placeholder" class="btn btn-sm btn-outline-dark" target="_blank">GitHub Repo</a>
+                <a href="https://medium.com/your-article-placeholder" class="btn btn-sm btn-outline-primary" target="_blank">Medium Article</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div> -->
           </div>
 
          
@@ -390,3 +406,57 @@
 </body>
 
 </html>
+
+<style>
+  /* Portfolio Section Custom Styling */
+  #portfolio.section-bg {
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+ .portfolio .card {
+    border: none;
+    border-radius: 18px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background: #fff;
+    box-shadow: 0 4px 24px 0 rgba(80, 80, 180, 0.08);
+  }
+   .portfolio .card:hover {
+    box-shadow: 0 8px 32px 0 rgba(80, 80, 180, 0.18);
+    transform: translateY(-6px) scale(1.03);
+  }
+   .portfolio .card-img-top {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    height: 180px;
+    object-fit: cover;
+    background: #f1f5f9;
+  }
+  .portfolio .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+  }
+  .portfolio .badge {
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    padding: 0.4em 0.8em;
+    border-radius: 8px;
+  }
+  .portfolio .btn {
+    margin-right: 0.3em;
+    margin-bottom: 0.3em;
+    font-size: 0.92em;
+    border-radius: 6px;
+  }
+  .portfolio .card-text {
+    min-height: 70px;
+    color: #4b5563;
+  }
+  .portfolio .small.text-muted {
+    color: #64748b !important;
+    font-size: 0.93em;
+    margin-bottom: 0.7em;
+  } 
+</style> 

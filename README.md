@@ -66,20 +66,16 @@ This project demonstrate how to deploy a static website to AWS using AWS S3, Clo
         ![createreccord](assets/img/createreccord.png)
         ![dnsrecord](assets/img/dnsrecord.png)
 9.  Now lets create our cloudfront distribution
-    1. Add the Origin domain name
+    1. Create distribution name and add custom domain
         ![cloudfront](assets/img/cloudfront.png)
-    2. Redirect form HTTP to HTTPS
-        ![redirecthttp](assets/img/redirecthttp.png)
+    2. Add the Origin domain name
+        ![domain](assets/img/domain.png)
     3. Enable secuirty protection
         ![waf](assets/img/waf.png)
-    4. Add your apex and wildcard domain name. Then select your custom ssl certificate
-        ![sslselection](assets/img/sslselection.png)
-    5. Add your landing/home page(index.html).
-        ![rooturl](assets/img/rooturl.png)
+        Then click on create distribution
         Now we should have something.cloudfront.net serving our website. But thats not what we want to be calling to get to the website. So we need to change the DNS settings 
 
 10. Create an A record to point to the cloudfront distribution. 
     ![oldA](assets/img/oldA.png)
     We are going to modify the previous record to point to out cloudfront distribution rather than our s3 endpoint url link
     ![newA](assets/img/newA.png)
-    You can also create another A record but this time with a www subdomain.

@@ -1,0 +1,31 @@
+1️⃣ Create the bucket in us-east-1
+aws s3api create-bucket \
+  --bucket oluwaseunadeyo.com.ng \
+  --region us-east-1
+
+2️⃣ Disable all public access blocking on the bucket
+aws s3api put-public-access-block \
+  --bucket oluwaseunadeyo.com.ng \
+  --public-access-block-configuration \
+  "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+3️⃣ Add a bucket policy to allow full public read access
+  aws s3api put-bucket-policy \
+    --bucket oluwaseunadeyo.com.ng \
+    --policy '{
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Sid": "AllowPublicRead",
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::oluwaseunadeyo.com.ng/*"
+        }
+      ]
+    }'
+4️⃣ Enable static website hosting
+    aws s3 website s3://oluwaseunadeyo.com.ng/ \
+      --index-document index.html
+
+5. Copy files into bucket
+aws s3 cp . s3://oluwaseunadeyo.com.ng/ --recursive  
